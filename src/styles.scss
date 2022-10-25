@@ -1,0 +1,225 @@
+$color-red: #ffa69e;
+$color-green: #b8f2e6;
+$color-darkblue: #5e6472;
+$color-yellow: #faf3dd;
+$color-lightblue: #aed9e0;
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $color-darkblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    color: $color-red;
+}
+
+.game-wrapper {
+    margin-bottom: 4rem;
+}
+
+h1 {
+    margin-bottom: 4rem;
+    align-self: center;
+    font-family: 'Pacifico', 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+h1,
+h3 {
+    color: $color-green;
+}
+
+.grid {
+    margin-bottom: 2rem;
+    width: 300px;
+    height: 300px;
+    border: 10px solid $color-lightblue;
+    background-color: $color-green;
+    line-height: 0;
+
+    @media (min-width: 500px) {
+        width: 400px;
+        height: 400px;
+    }
+
+    @media (min-width: 768px) {
+        width: 600px;
+        height: 600px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 800px;
+        height: 800px;
+    }
+
+    &.reload {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        margin: 0;
+        width: 75px;
+        height: 75px;
+        border: 1px solid $color-lightblue;
+        box-sizing: border-box;
+        object-fit: cover;
+        transition: all 1s ease-in-out;
+
+        @media (min-width: 500px) {
+            width: 100px;
+            height: 100px;
+        }
+
+        @media (min-width: 768px) {
+            width: 150px;
+            height: 150px;
+        }
+
+        @media (min-width: 1024px) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+.win-message-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $color-darkblue;
+
+    @media (min-width: 768px) {
+        font-size: 1.25rem;
+    }
+
+    .message {
+        padding: 2rem;
+
+        span {
+            color: $color-red;
+        }
+    }
+
+    .message,
+    .success-message {
+        line-height: 2rem;
+        text-align: center;
+    }
+}
+
+.reload-button,
+.highscore-button {
+    margin-bottom: 1rem;
+    padding: 2rem;
+    width: fit-content;
+    background-color: $color-red;
+    color: $color-yellow;
+    box-sizing: border-box;
+    line-height: 0;
+    border: none;
+    font-family: 'Press Start 2P', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: -5px 5px 0 0 $color-lightblue;
+
+    @media (min-width: 768px) {
+        font-size: 1.25rem;
+    }
+
+    &:active {
+        padding: 1.9rem;
+        background-color: $color-red;
+        box-shadow: -5px 5px 0 0 $color-red;
+    }
+}
+
+.send-button {
+    padding: 1rem;
+    width: fit-content;
+    height: 30px;
+    background-color: $color-red;
+    color: $color-yellow;
+    box-shadow: -5px 5px 0 0 #aec5e0;
+    box-sizing: border-box;
+    line-height: 0;
+    border: none;
+    font-family: 'Press Start 2P', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+}
+
+.form-container {
+    margin-top: 2rem;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-lightblue;
+    box-sizing: border-box;
+    color: $color-darkblue;
+
+    input[type='text'] {
+        padding: 1rem;
+        width: 350px;
+        height: 30px;
+        border: 1px solid $color-green;
+        border-radius: 0;
+        box-sizing: border-box;
+        color: $color-darkblue;
+    }
+}
+
+.game-info {
+    width: 100%;
+    font-size: smaller;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 767px) {
+        text-align: center;
+
+        div:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.label {
+    color: $color-red;
+
+    span {
+        color: $color-yellow;
+    }
+}
+
+.highscore-wrapper {
+    margin-bottom: 2rem;
+
+    .line {
+        margin-bottom: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        color: $color-yellow;
+    }
+}
+
+.time {
+    display: flex;
+}

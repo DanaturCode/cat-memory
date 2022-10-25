@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Memory Game 
+    link(rel='stylesheet' href='src/styles.scss')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap' rel='stylesheet')
+  body 
+    h1 Memory
+    .wrapper
+      .game-wrapper
+        .grid
+        .game-info 
+          .label Gefundene Paare:&nbsp;
+            span(data-pairs)
+          .label Versuche:&nbsp;
+            span(data-attempts)
+          .time.label Zeit:&nbsp;
+            span(data-time)
+              span(data-minutes)
+              | :
+              span(data-seconds)
+      .highscore-wrapper
+        h3 Highscores 
+        div
+          .line
+           .label Name
+           .label Zeit
+           .label Versuche
+          div(data-table='highscores')
+      script(src="src/script.js") 
